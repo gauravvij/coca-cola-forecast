@@ -1,0 +1,19 @@
+INFO:train_forecast:W&B initialized with run ID: 0c1eu2mp
+INFO:train_forecast:Loading processed data from /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+INFO:train_forecast:ADF test p-value: 0.443667
+INFO:train_forecast:Series not stationary, will apply differencing
+INFO:train_forecast:=== Training Trend-Based Forecasting Model ===
+INFO:train_forecast:Series length: 502
+INFO:train_forecast:Train size: 400, Test size: 101
+INFO:train_forecast:Model fitted successfully
+INFO:train_forecast:Trend slope: 0.0354
+INFO:train_forecast:Test Metrics - MAE: $3.75, RMSE: $4.08, MAPE: 5.53%
+INFO:train_forecast:Forecasting 90 trading days into future...
+INFO:train_forecast:Forecast range: $74.25 - $77.40
+Traceback (most recent call last):
+  File "/home/ubuntu/neo_projects/wandb_t1/run_full_pipeline.py", line 20, in <module>
+    results = train_and_forecast(data_path='/home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv', forecast_days=90)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/train_forecast.py", line 222, in train_and_forecast
+    pickle.dump(results, f)
+AttributeError: Can't pickle local object 'train_sarima_model.<locals>.SimpleModel'

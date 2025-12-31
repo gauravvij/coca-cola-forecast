@@ -1,0 +1,53 @@
+INFO:train_forecast:W&B initialized with run ID: qfr1nwdb
+INFO:train_forecast:Loading processed data from /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+INFO:train_forecast:ADF test p-value: 0.443667
+INFO:train_forecast:Series not stationary, will apply differencing
+INFO:train_forecast:=== Training Trend-Based Forecasting Model ===
+INFO:train_forecast:Series length: 502
+INFO:train_forecast:Train size: 400, Test size: 101
+INFO:train_forecast:Model fitted successfully
+INFO:train_forecast:Trend slope: 0.0354
+INFO:train_forecast:Test Metrics - MAE: $3.75, RMSE: $4.08, MAPE: 5.53%
+INFO:train_forecast:Forecasting 90 trading days into future...
+INFO:train_forecast:Forecast range: $74.25 - $77.40
+INFO:train_forecast:=== Training Complete ===
+INFO:train_forecast:Forecast values (first 5 days): [74.24943168 74.28482482 74.32021796 74.35561111 74.39100425]
+INFO:train_forecast:Forecast values (last 5 days): [77.25784862 77.29324176 77.3286349  77.36402804 77.39942118]
+INFO:__main__:
+[STEP 3/3] Visualization - Generate Plots & Upload to W&B
+INFO:visualize:=== Generating Visualizations ===
+INFO:visualize:Creating original price + MA plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_price_with_ma.png
+INFO:visualize:Creating train/test split plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_train_test_split.png
+INFO:visualize:Creating forecast with confidence intervals plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_forecast_with_ci.png
+INFO:visualize:Creating residuals plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_residuals.png
+INFO:visualize:Creating ACF/PACF diagnostics plot...
+Traceback (most recent call last):
+  File "/home/ubuntu/neo_projects/wandb_t1/run_full_pipeline.py", line 23, in <module>
+    vis_paths = generate_all_visualizations(results, output_dir='/home/ubuntu/neo_projects/wandb_t1/visualizations')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/visualize.py", line 254, in generate_all_visualizations
+    fig5 = plot_acf_pacf(train_data, test_data, test_pred)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/visualize.py", line 177, in plot_acf_pacf
+    fig, axes = plt.subplots(1, 2, figsize=figsize)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/matplotlib/pyplot.py", line 1776, in subplots
+    fig = figure(**fig_kw)
+          ^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/matplotlib/pyplot.py", line 1041, in figure
+    manager = new_figure_manager(
+              ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/matplotlib/pyplot.py", line 551, in new_figure_manager
+    return _get_backend_mod().new_figure_manager(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/matplotlib/backend_bases.py", line 3503, in new_figure_manager
+    fig = fig_cls(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/matplotlib/figure.py", line 2626, in __init__
+    self.bbox_inches = Bbox.from_bounds(0, 0, *figsize)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Bbox.from_bounds() takes 4 positional arguments but 103 were given

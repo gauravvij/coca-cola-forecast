@@ -1,0 +1,13 @@
+{
+  "os":  "Linux-6.14.0-1018-aws-x86_64-with-glibc2.39",
+  "python":  "CPython 3.12.3",
+  "startedAt":  "2025-12-31T11:10:48.533109Z",
+  "program":  "/home/ubuntu/neo_projects/wandb_t1/run_full_pipeline.py",
+  "codePath":  "run_full_pipeline.py",
+  "codePathLocal":  "run_full_pipeline.py",
+  "email":  "gauravc311@gmail.com",
+  "root":  "/home/ubuntu/neo_projects/wandb_t1",
+  "host":  "ip-10-1-41-2",
+  "executable":  "/home/ubuntu/neo_projects/wandb_t1/venv/bin/python",
+  "writerId":  "lhgurwr4s9p2nz5sf6ck1xrsbwcyikzy"
+}

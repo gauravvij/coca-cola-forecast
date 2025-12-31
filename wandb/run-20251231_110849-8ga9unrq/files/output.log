@@ -1,0 +1,25 @@
+INFO:train_forecast:W&B initialized with run ID: 8ga9unrq
+INFO:train_forecast:Loading processed data from /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+Traceback (most recent call last):
+  File "/home/ubuntu/neo_projects/wandb_t1/run_full_pipeline.py", line 20, in <module>
+    results = train_and_forecast(data_path='/home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv', forecast_days=90)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/train_forecast.py", line 159, in train_and_forecast
+    needs_diff = check_stationarity(close_prices)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/train_forecast.py", line 51, in check_stationarity
+    adf_result = adfuller(series.dropna(), autolag='AIC')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/statsmodels/tsa/stattools.py", line 263, in adfuller
+    x = array_like(x, "x")
+        ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/statsmodels/tools/validation/validation.py", line 143, in array_like
+    arr = np.require(obj, dtype=dtype, requirements=reqs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/numpy/_core/_asarray.py", line 122, in require
+    arr = array(a, dtype=dtype, order=order, copy=None, subok=subok)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/pandas/core/series.py", line 1036, in __array__
+    arr = np.asarray(values, dtype=dtype)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'KO'

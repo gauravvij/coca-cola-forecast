@@ -1,0 +1,66 @@
+_wandb:
+    value:
+        cli_version: 0.23.1
+        e:
+            45yj9gbnvx96ry6lx3s9ie6y0lbvzio6:
+                codePath: run_full_pipeline.py
+                codePathLocal: run_full_pipeline.py
+                cpu_count: 1
+                cpu_count_logical: 2
+                disk:
+                    /:
+                        total: "102888095744"
+                        used: "92231880704"
+                email: gauravc311@gmail.com
+                executable: /home/ubuntu/neo_projects/wandb_t1/venv/bin/python
+                host: ip-10-1-41-2
+                memory:
+                    total: "8112783360"
+                os: Linux-6.14.0-1018-aws-x86_64-with-glibc2.39
+                program: /home/ubuntu/neo_projects/wandb_t1/run_full_pipeline.py
+                python: CPython 3.12.3
+                root: /home/ubuntu/neo_projects/wandb_t1
+                startedAt: "2025-12-31T11:14:29.045240Z"
+                writerId: 45yj9gbnvx96ry6lx3s9ie6y0lbvzio6
+        m: []
+        python_version: 3.12.3
+        t:
+            "1":
+                - 5
+                - 53
+            "2":
+                - 5
+                - 53
+            "3":
+                - 2
+                - 3
+                - 16
+            "4": 3.12.3
+            "5": 0.23.1
+            "8":
+                - 2
+            "12": 0.23.1
+            "13": linux-x86_64
+arima_order:
+    value:
+        - 1
+        - 1
+        - 1
+data_source:
+    value: yfinance
+forecast_horizon_days:
+    value: 90
+ma_window:
+    value: 20
+random_seed:
+    value: 42
+seasonal_order:
+    value:
+        - 1
+        - 1
+        - 1
+        - 252
+ticker:
+    value: KO
+train_test_split:
+    value: 0.8

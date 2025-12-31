@@ -1,0 +1,23 @@
+2025-12-31 11:10:48,534 INFO    MainThread:94065 [wandb_setup.py:_flush():80] Current SDK version is 0.23.1
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_setup.py:_flush():80] Configure stats pid to 94065
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_setup.py:_flush():80] Loading settings from /home/ubuntu/.config/wandb/settings
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_setup.py:_flush():80] Loading settings from /home/ubuntu/neo_projects/wandb_t1/wandb/settings
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_init.py:setup_run_log_directory():714] Logging user logs to /home/ubuntu/neo_projects/wandb_t1/wandb/run-20251231_111048-0c1eu2mp/logs/debug.log
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_init.py:setup_run_log_directory():715] Logging internal logs to /home/ubuntu/neo_projects/wandb_t1/wandb/run-20251231_111048-0c1eu2mp/logs/debug-internal.log
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_init.py:init():841] calling init triggers
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_init.py:init():846] wandb.init called with sweep_config: {}
+config: {'ticker': 'KO', 'data_source': 'yfinance', 'forecast_horizon_days': 90, 'ma_window': 20, 'arima_order': (1, 1, 1), 'seasonal_order': (1, 1, 1, 252), 'train_test_split': 0.8, 'random_seed': 42, '_wandb': {}}
+2025-12-31 11:10:48,535 INFO    MainThread:94065 [wandb_init.py:init():889] starting backend
+2025-12-31 11:10:48,753 INFO    MainThread:94065 [wandb_init.py:init():892] sending inform_init request
+2025-12-31 11:10:48,756 INFO    MainThread:94065 [wandb_init.py:init():900] backend started and connected
+2025-12-31 11:10:48,774 INFO    MainThread:94065 [wandb_init.py:init():970] updated telemetry
+2025-12-31 11:10:48,774 INFO    MainThread:94065 [wandb_init.py:init():994] communicating run to backend with 90.0 second timeout
+2025-12-31 11:10:49,534 INFO    MainThread:94065 [wandb_init.py:init():1041] starting run threads in backend
+2025-12-31 11:10:49,579 INFO    MainThread:94065 [wandb_run.py:_console_start():2521] atexit reg
+2025-12-31 11:10:49,579 INFO    MainThread:94065 [wandb_run.py:_redirect():2369] redirect: wrap_raw
+2025-12-31 11:10:49,579 INFO    MainThread:94065 [wandb_run.py:_redirect():2438] Wrapping output streams.
+2025-12-31 11:10:49,579 INFO    MainThread:94065 [wandb_run.py:_redirect():2461] Redirects installed.
+2025-12-31 11:10:49,582 INFO    MainThread:94065 [wandb_init.py:init():1081] run started, returning control to user process
+2025-12-31 11:10:49,705 INFO    wandb-AsyncioManager-main:94065 [service_client.py:_forward_responses():80] Reached EOF.
+2025-12-31 11:10:49,705 INFO    wandb-AsyncioManager-main:94065 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.

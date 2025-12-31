@@ -1,0 +1,6 @@
+{"time":"2025-12-31T11:09:09.726825884Z","level":"INFO","msg":"stream: starting","core version":"0.23.1"}
+{"time":"2025-12-31T11:09:10.123488307Z","level":"INFO","msg":"stream: created new stream","id":"70ndnadd"}
+{"time":"2025-12-31T11:09:10.123576099Z","level":"INFO","msg":"handler: started","stream_id":"70ndnadd"}
+{"time":"2025-12-31T11:09:10.123733563Z","level":"INFO","msg":"stream: started","id":"70ndnadd"}
+{"time":"2025-12-31T11:09:10.123836955Z","level":"INFO","msg":"writer: started","stream_id":"70ndnadd"}
+{"time":"2025-12-31T11:09:10.123852845Z","level":"INFO","msg":"sender: started","stream_id":"70ndnadd"}

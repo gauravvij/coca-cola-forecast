@@ -1,0 +1,34 @@
+INFO:train_forecast:W&B initialized with run ID: z57t3qbr
+INFO:train_forecast:Loading processed data from /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+INFO:train_forecast:ADF test p-value: 0.443667
+INFO:train_forecast:Series not stationary, will apply differencing
+INFO:train_forecast:=== Training Exponential Smoothing Model ===
+INFO:train_forecast:Series length: 502
+INFO:train_forecast:Train size: 401, Test size: 101
+INFO:train_forecast:Model fitted successfully
+INFO:train_forecast:SSE: nan
+WARNING:train_forecast:ExponentialSmoothing failed: 'trend'. Using simple ARIMA.
+Traceback (most recent call last):
+  File "/home/ubuntu/neo_projects/wandb_t1/src/train_forecast.py", line 107, in train_sarima_model
+    test_predictions = results.fittedvalues.iloc[-1] + (results.params['trend'] * np.arange(1, len(test_data) + 1))
+                                                        ~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'trend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ubuntu/neo_projects/wandb_t1/run_full_pipeline.py", line 20, in <module>
+    results = train_and_forecast(data_path='/home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv', forecast_days=90)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/train_forecast.py", line 182, in train_and_forecast
+    results, train_data, test_data, test_pred, metrics = train_sarima_model(
+                                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/src/train_forecast.py", line 113, in train_sarima_model
+    model = SARIMAX(train_data, order=(1,1,1), seasonal_order=(0,0,0,1),
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/statsmodels/tsa/statespace/sarimax.py", line 328, in __init__
+    self._spec = SARIMAXSpecification(
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/neo_projects/wandb_t1/venv/lib/python3.12/site-packages/statsmodels/tsa/arima/specification.py", line 303, in __init__
+    raise ValueError('Seasonal periodicity must be greater'
+ValueError: Seasonal periodicity must be greater than 1.

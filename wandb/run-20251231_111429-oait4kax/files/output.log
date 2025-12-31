@@ -1,0 +1,39 @@
+INFO:train_forecast:W&B initialized with run ID: oait4kax
+INFO:train_forecast:Loading processed data from /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+INFO:train_forecast:ADF test p-value: 0.443667
+INFO:train_forecast:Series not stationary, will apply differencing
+INFO:train_forecast:=== Training Trend-Based Forecasting Model ===
+INFO:train_forecast:Series length: 502
+INFO:train_forecast:Train size: 400, Test size: 101
+INFO:train_forecast:Model fitted successfully
+INFO:train_forecast:Trend slope: 0.0354
+INFO:train_forecast:Test Metrics - MAE: $3.75, RMSE: $4.08, MAPE: 5.53%
+INFO:train_forecast:Forecasting 90 trading days into future...
+INFO:train_forecast:Forecast range: $74.25 - $77.40
+INFO:train_forecast:Model saved to models/ko_trend_model.joblib
+wandb: WARNING Symlinked 1 file into the W&B run directory; call wandb.save again to sync new files.
+INFO:train_forecast:=== Training Complete ===
+INFO:train_forecast:Forecast values (first 5 days): [74.24943188 74.28482502 74.32021816 74.3556113  74.39100444]
+INFO:train_forecast:Forecast values (last 5 days): [77.25784893 77.29324207 77.32863521 77.36402835 77.3994215 ]
+INFO:__main__:
+[STEP 3/3] Visualization - Generate Plots & Upload to W&B
+INFO:visualize:=== Generating Visualizations ===
+INFO:visualize:Creating original price + MA plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_price_with_ma.png
+INFO:visualize:Creating train/test split plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_train_test_split.png
+INFO:visualize:Creating forecast with confidence intervals plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_forecast_with_ci.png
+INFO:visualize:Creating residuals plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_residuals.png
+INFO:visualize:Creating ACF/PACF diagnostics plot...
+INFO:visualize:Saved to /home/ubuntu/neo_projects/wandb_t1/visualizations/ko_acf_pacf.png
+INFO:visualize:=== All visualizations completed and logged to W&B ===
+INFO:__main__:
+======================================================================
+INFO:__main__:PIPELINE COMPLETE - All deliverables generated
+INFO:__main__:======================================================================
+INFO:__main__:✓ Processed data: /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+INFO:__main__:✓ Model artifact: models/ko_trend_model.joblib
+INFO:__main__:✓ Visualizations: /home/ubuntu/neo_projects/wandb_t1/visualizations/
+INFO:__main__:✓ W&B run logged with metrics, parameters, and artifacts

@@ -1,0 +1,8 @@
+INFO:train_forecast:W&B initialized with run ID: 70ndnadd
+INFO:train_forecast:Loading processed data from /home/ubuntu/neo_projects/wandb_t1/data/ko_processed.csv
+INFO:train_forecast:ADF test p-value: 0.443666
+INFO:train_forecast:Series not stationary, will apply differencing
+INFO:train_forecast:=== Training SARIMA Model ===
+INFO:train_forecast:Series length: 502
+INFO:train_forecast:Train size: 401, Test size: 101
+INFO:train_forecast:ARIMA order: (1, 1, 1), Seasonal order: (1, 1, 1, 252)
