@@ -26,12 +26,10 @@ We use **yfinance** to download historical stock data for Coca-Cola (ticker: KO)
 
 ### Data Collection Parameters
 ```
-```
 Ticker: KO (Coca-Cola Company)
 Historical Period: 2 years (730 days)
 Data Frequency: Daily
 Target Variable: Closing Price (Adj Close)
-```
 ```
 
 ### Data Quality
@@ -136,9 +134,7 @@ We evaluate using three standard time series metrics:
 
 #### 1. Mean Absolute Error (MAE)
 ```
-```
 MAE = (1/n) * Σ|actual - predicted|
-```
 ```
 - **Interpretation**: Average absolute deviation in dollars
 - **Advantage**: Easy to interpret in terms of dollar amounts
@@ -146,9 +142,7 @@ MAE = (1/n) * Σ|actual - predicted|
 
 #### 2. Root Mean Squared Error (RMSE)
 ```
-```
 RMSE = √((1/n) * Σ(actual - predicted)²)
-```
 ```
 - **Interpretation**: Penalizes larger errors more heavily
 - **Advantage**: Same units as target variable
@@ -156,9 +150,7 @@ RMSE = √((1/n) * Σ(actual - predicted)²)
 
 #### 3. Mean Absolute Percentage Error (MAPE)
 ```
-```
 MAPE = (1/n) * Σ(|actual - predicted| / |actual|) * 100
-```
 ```
 - **Interpretation**: Percentage error, scale-independent
 - **Advantage**: Comparable across different time periods
@@ -166,12 +158,10 @@ MAPE = (1/n) * Σ(|actual - predicted| / |actual|) * 100
 
 ### Results Summary
 ```
-```
 Test Set Performance:
   MAE:  $1.45 (average error in dollars)
   RMSE: $1.82 (penalizes large errors)
   MAPE: 2.1% (percentage error)
-```
 ```
 
 ### Model Diagnostics
@@ -226,14 +216,11 @@ All outputs are logged to W&B project `ko-stock-forecasting-pipeline`:
 
 #### Metrics
 ```
-```
 train_mae, train_rmse, train_mape
 test_mae, test_rmse, test_mape
 ```
-```
 
 #### Parameters
-```
 ```
 model_type: "SARIMA"
 order: (1, 1, 1)
@@ -242,7 +229,6 @@ ma_window: 20
 train_test_split: 0.8
 forecast_horizon: 90
 random_seed: 42
-```
 ```
 
 #### Artifacts
@@ -311,12 +297,10 @@ The final W&B dashboard provides:
 
 ### Code Organization
 ```
-```
 src/
   ├── data_pipeline.py      # Download and preprocess data
   ├── train_forecast.py     # Train model and generate forecasts
   └── main.py               # Orchestration and W&B logging
-```
 ```
 
 ### Reproducibility Features
@@ -351,12 +335,12 @@ This project demonstrates a production-ready time series forecasting pipeline fo
 
 We achieve reliable 3-month forecasts with interpretable confidence intervals, suitable for financial decision-making.
 
-All code is available in the [GitHub repository](https://github.com/pipeline-bot/ko-stock-forecasting-pipeline), with complete experiment tracking in the W&B dashboard for reproducibility and collaboration.
+All code is available in the [GitHub repository](https://github.com/gauravvij/coca-cola-forecast), with complete experiment tracking in the W&B dashboard for reproducibility and collaboration.
 
 ---
 
 **Project Metadata**
-- **Last Updated**: December 31, 2024
+- **Last Updated**: December 31, 2025
 - **W&B Project**: ko-stock-forecasting-pipeline
 - **GitHub Repository**: ko-stock-forecasting-pipeline
 - **Data Source**: yfinance (Yahoo Finance)
