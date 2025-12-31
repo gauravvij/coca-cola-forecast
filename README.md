@@ -3,6 +3,8 @@
 ## Overview
 This project implements a comprehensive time series forecasting pipeline for Coca-Cola (KO) stock price prediction using 2 years of historical data, moving average smoothing, and statsmodels-based forecasting models.
 
+**Repository**: https://github.com/gauravvij/coca-cola-forecast
+
 ## Project Structure
 ```
 ```
