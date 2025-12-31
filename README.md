@@ -7,7 +7,6 @@ This project implements a comprehensive time series forecasting pipeline for Coc
 
 ## Project Structure
 ```
-```
 .
 ├── src/
 │   ├── data_pipeline.py       # Data acquisition and preprocessing
@@ -19,7 +18,6 @@ This project implements a comprehensive time series forecasting pipeline for Coc
 ├── run_pipeline.py            # Pipeline execution script
 ├── run_full_pipeline.py       # Full end-to-end pipeline
 └── README.md                  # This file
-```
 ```
 
 ## Features
